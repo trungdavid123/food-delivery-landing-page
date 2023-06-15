@@ -27,7 +27,7 @@ export default function Home() {
                 </div>
               </div>
               <div className='hidden md:block'>
-                <Image alt="bild" className="rounded-lg object-cover object-left min-[768px]:w-[40vw]" src="/right-bg-5.png"
+                <Image alt="bild" className="rounded-lg object-cover object-left min-[768px]:w-[40vw]" src="/right-bg-6.png"
                   width={450} height={450} />
               </div>
             </div>
