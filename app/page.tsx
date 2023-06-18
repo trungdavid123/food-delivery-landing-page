@@ -1,11 +1,9 @@
-
 import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
 import Footer from '@/components/Footer'
 import Layout from '@/components/Layout'
 import Services from '@/components/Services'
 import Image from 'next/image'
-import { Link as ScrollLink } from 'react-scroll/modules';
 
 export default function Home() {
   return (
@@ -20,7 +18,7 @@ export default function Home() {
                   <span className='text-white text-md md:text-xl'>We are team of talented designers making websites with Bootstrap</span>
                   <span className='text-white text-sm mb-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id non temporibus quam ipsam facere dolorem debitis eius iusto sit dignissimos pariatur repellendus fugit numquam dolore soluta optio, in sed commodi.</span>
                   <div>
-                    <a href='#contact-us' className='text-primary bg-white py-2 px-5 rounded transition md:px-5 text-lg hover:-translate-y-2 font-semibold' >
+                    <a href='#contact-us' className='text-primary bg-white py-3 px-5 rounded transition md:px-5 text-lg hover:-translate-y-2 font-semibold' >
                       Contact Us
                     </a>
                   </div>
@@ -33,7 +31,6 @@ export default function Home() {
             </div>
           </div>
         </main>
-
         <AboutUs />
         <Services />
         <ContactUs />
