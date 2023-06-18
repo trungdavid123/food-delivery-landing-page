@@ -13,7 +13,7 @@ const ContactForm = () => {
     }
 
     return (
-        <div className='md:h-[75vh] w-full md:w-auto px-10 md:shadow py-6 rounded-lg'>
+        <div className='md:h-[75vh] w-full md:w-auto px-6 md:px-10 md:shadow py-6 rounded-lg'>
             <form className='flex flex-col' onSubmit={handleSubmit}>
                 <div className='flex flex-col md:flex-row gap-3'>
                     <div>
