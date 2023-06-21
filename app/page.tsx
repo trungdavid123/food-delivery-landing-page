@@ -16,12 +16,11 @@ export default function Home() {
         <Layout>
           <main className='h-[100vh] -mb-[1rem]'>
             <div className="relative h-full bg-[url('/bg-home-main.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-              <div className="w-full h-full md:h-full bg-slate-900 inset-0 z-0 bg-opacity-40 md:bg-opacity-40 flex items-center md:px-12">
+              <div className="w-full h-full bg-slate-900 inset-0 z-0 bg-opacity-40 md:bg-opacity-40 flex items-center md:px-12">
                 <div className='px-4 flex flex-col justify-center h-full md:w-1/2'>
                   <div className="flex flex-col gap-3">
-                    <h1 className=' text-4xl md:text-5xl text-white font-bold md:w-4/5'>Beställ din mat och får det till din dörr! </h1>
+                    <h1 className=' text-4xl md:text-5xl text-white font-bold md:w-4/5'>Beställ din mat och får det till din<span className='text-yellow-400'> dörr</span>! </h1>
                     <span className='text-white text-md md:text-xl mb-6'>Hungriga är ett företag som vill skapa möjligheten för alla, små- som stora att kunna beställa hem sin mat</span>
-
                     <div>
                       <a href='#contact-us' className='text-primary bg-white py-3 px-5 rounded transition md:px-5 text-lg hover:-translate-y-2 font-semibold' >
                         Kontakt oss
@@ -29,7 +28,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </main>
