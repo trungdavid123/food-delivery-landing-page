@@ -6,7 +6,7 @@ import React from 'react'
 const AboutUs = () => {
     return (
         <div className='h-auto bg-white' id='about'>
-            <div className='lg:py-16 lg:px-28 px-5 pt-20 pb-20 flex md:gap-16 flex-col-reverse gap-10 md:flex-row'>
+            <div className='lg:py-16 lg:px-28 px-5 md:pt-20 md:pb-20 flex md:gap-16 flex-col-reverse gap-10 md:flex-row'>
                 <div>
                     <Image src='/left-image.jpg' className='h-[50vh] object-cover rounded-lg' width={500} height={600} alt='img' />
                 </div>
