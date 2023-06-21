@@ -18,7 +18,7 @@ const ContactUs = () => {
         <div id='contact-us'>
             <div className='py-10'>
                 <div className='flex flex-col items-center gap-3'>
-                    <h2 className='text-2xl relative font-semibold mb-6 text-primary'>Contact Us
+                    <h2 className='text-2xl relative font-semibold mb-6 text-primary'>Kontakta oss
                         <span className="absolute -bottom-3 left-10 w-[50px] h-[2px] bg-primary"></span>
                     </h2>
                     <div className='px-3 mb-2 md:w-3/5 text-center'>
