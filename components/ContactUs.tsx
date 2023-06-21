@@ -1,7 +1,19 @@
+'use client'
+
 import React from 'react'
 import ContactForm from './ContactForm'
 
 const ContactUs = () => {
+
+    const handleCall = () => {
+        window.location.href = 'tel:0724438913';
+    };
+
+    const handleEmail = () => {
+        window.location.href = 'mailto:info.hungrigaab.se';
+    };
+
+
     return (
         <div id='contact-us'>
             <div className='py-10'>
@@ -9,8 +21,8 @@ const ContactUs = () => {
                     <h2 className='text-2xl relative font-semibold mb-6 text-primary'>Contact Us
                         <span className="absolute -bottom-3 left-10 w-[50px] h-[2px] bg-primary"></span>
                     </h2>
-                    <div className=' px-3 md:w-3/5 text-center'>
-                        <p className='text-sm font-medium leading-6'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div className='px-3 mb-2 md:w-3/5 text-center'>
+                        <p className='text-md font-medium leading-6'>Prisvärd matleverans för alla: Hungriga gör det enkelt att beställa och njuta av mat hemma </p>
                     </div>
                 </div>
                 <div className='flex flex-col items-center lg:flex-row justify-center gap-4 mt-5 '>
@@ -26,8 +38,8 @@ const ContactUs = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 className='text-lg text-primary font-bold'>Location:</h3>
-                                        <p className='text-sm'>Ystadsgatan 37, 214 44 Malmö</p>
+                                        <h3 className='text-lg text-primary font-bold'>Plats:</h3>
+                                        <p className='text-sm'>Kristianstad</p>
                                     </div>
                                 </div>
                                 <div className='flex items-center gap-3'>
@@ -36,9 +48,9 @@ const ContactUs = () => {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                                         </svg>
                                     </div>
-                                    <div>
-                                        <h3 className='text-lg text-primary font-bold'>Mail:</h3>
-                                        <p className='text-sm'>info@example.com</p>
+                                    <div onClick={handleEmail} className='cursor-pointer'>
+                                        <h3 className='text-lg text-primary font-bold'>E-post:</h3>
+                                        <p className='text-sm'>info.hungrigaab.se</p>
                                     </div>
                                 </div>
                                 <div className='flex items-center gap-3'>
@@ -47,14 +59,14 @@ const ContactUs = () => {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                                         </svg>
                                     </div>
-                                    <div>
-                                        <h3 className='text-lg text-primary font-bold'>Call:</h3>
-                                        <p className='text-sm'>070-788 59 69</p>
+                                    <div onClick={handleCall} className='cursor-pointer'>
+                                        <h3 className='text-lg text-primary font-bold'>Ringa:</h3>
+                                        <p className='text-sm'>0724438913</p>
                                     </div>
                                 </div>
                             </div>
                             <div className='mt-10'>
-                                <iframe className='w-full' height={270} id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Gothenburg+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                                <iframe className='w-full' height={270} id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%Kristianstad+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                             </div>
                         </div>
                     </div>
