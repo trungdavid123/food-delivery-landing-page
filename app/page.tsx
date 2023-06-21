@@ -16,7 +16,7 @@ export default function Home() {
         <Layout>
           <main className='h-[100vh] -mb-[1rem]'>
             <div className="relative h-full bg-[url('/bg-home-main.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-              <div className="w-full h-full bg-slate-900 inset-0 z-0 bg-opacity-40 md:bg-opacity-40 flex items-center md:px-12">
+              <div className="w-full h-full bg-slate-900 bg-opacity-40 flex items-center md:px-12">
                 <div className='px-4 flex flex-col justify-center h-full md:w-1/2'>
                   <div className="flex flex-col gap-3">
                     <h1 className=' text-4xl md:text-5xl text-white font-bold md:w-4/5'>Beställ din mat och får det till din<span className='text-yellow-400'> dörr</span>! </h1>
