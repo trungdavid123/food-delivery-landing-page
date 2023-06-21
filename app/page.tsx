@@ -15,7 +15,7 @@ export default function Home() {
       <div id='home'>
         <Layout>
           <main className='h-[100vh] -mb-[1rem]'>
-            <div className="h-full bg-[url('/bg-home-main.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+            <div className="h-full bg-no-repeat bg-center bg-fixed bg-cover">
               <div className="w-full h-full bg-slate-900 bg-opacity-40 flex items-center md:px-12">
                 <div className='px-4 flex flex-col justify-center h-full md:w-1/2'>
                   <div className="flex flex-col gap-3">
