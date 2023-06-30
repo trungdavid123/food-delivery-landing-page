@@ -3,9 +3,21 @@ import ContactUs from '@/components/ContactUs'
 import Footer from '@/components/Footer'
 import Layout from '@/components/Layout'
 import Services from '@/components/Services'
+
 import Head from 'next/head'
 
-export default function Home() {
+
+async function getData() {
+  const res = await fetch(`${process.env.STRAPI_PUBLIC_URL}/api/main-texts/1/?populate=*`, { cache: "no-cache" });
+  return res.json();
+}
+
+export default async function Home() {
+  const data = getData();
+  const [allData] = await Promise.all([data])
+  const { title, description, background, about_us_title, about_us_desc_1, about_us_desc_2, about_us_img, service_title, service_desc, service_card_title_1, service_card_desc_1, service_card_title_2, service_card_desc_2, contact_us_title, contact_us_desc, contact_us_location, contact_us_mail, contact_us_phone, google_map_url } = allData.data.attributes
+
+
   return (
     <>
       <Head>
@@ -15,12 +27,14 @@ export default function Home() {
       <div id='home'>
         <Layout>
           <main className='h-[100vh] -mb-[1rem]'>
-            <div className="absolute inset-0 h-full z-10 bg-[url('/bg-home-main.jpg')] bg-no-repeat bg-center md:bg-fixed bg-cover">
+            <div style={{
+              backgroundImage: `url(${process.env.STRAPI_PUBLIC_URL}${background.data.attributes.url})`,
+            }} className={`absolute inset-0 h-full z-10  bg-no-repeat bg-center md:bg-fixed bg-cover`}>
               <div className="w-full h-full bg-slate-900 bg-opacity-40 flex items-center md:px-12">
                 <div className='px-4 flex flex-col justify-center h-full md:w-1/2'>
                   <div className="flex flex-col gap-3">
-                    <h1 className=' text-4xl md:text-5xl text-white font-bold md:w-4/5'>Beställ din mat och får det till din<span className='text-yellow-400'> dörr</span>!</h1>
-                    <span className='text-white text-md md:text-xl mb-6'>Hungriga är ett företag som vill skapa möjligheten för alla, små- som stora att kunna beställa hem sin mat</span>
+                    <h1 className=' text-4xl md:text-5xl text-white font-bold md:w-4/5' dangerouslySetInnerHTML={{ __html: title }}></h1>
+                    <span className='text-white text-md md:text-xl mb-6'>{description}</span>
                     <div>
                       <a href='#contact-us' className='text-primary bg-white py-3 px-5 rounded transition md:px-5 text-lg hover:-translate-y-2 font-semibold' >
                         Kontakt oss
@@ -31,9 +45,9 @@ export default function Home() {
               </div>
             </div>
           </main>
-          <AboutUs />
-          <Services />
-          <ContactUs />
+          <AboutUs title={about_us_title} desc_1={about_us_desc_1} desc_2={about_us_desc_2} bg_img={about_us_img} />
+          <Services title={service_title} desc={service_desc} card_title_1={service_card_title_1} card_title_2={service_card_title_2} card_desc_1={service_card_desc_1} card_desc_2={service_card_desc_2} />
+          <ContactUs title={contact_us_title} desc={contact_us_desc} location={contact_us_location} email={contact_us_mail} phone={contact_us_phone} url={google_map_url} />
           <Footer />
         </Layout>
       </div>

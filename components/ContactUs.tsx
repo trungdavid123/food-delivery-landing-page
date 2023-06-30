@@ -3,14 +3,25 @@
 import React from 'react'
 import ContactForm from './ContactForm'
 
-const ContactUs = () => {
+interface Iprops {
+    title: string,
+    desc: string,
+    location: string,
+    email: string,
+    phone: string,
+    url: string
+}
+
+const ContactUs: React.FC<Iprops> = ({ title, desc, location, email, phone, url }) => {
+
+
 
     const handleCall = () => {
-        window.location.href = 'tel:0724438913';
+        window.location.href = `tel:${phone}`;
     };
 
     const handleEmail = () => {
-        window.location.href = 'mailto:info.hungrigaab.se';
+        window.location.href = `mailto:${email}`;
     };
 
 
@@ -18,11 +29,11 @@ const ContactUs = () => {
         <div id='contact-us'>
             <div className='py-10'>
                 <div className='flex flex-col items-center gap-3'>
-                    <h2 className='text-2xl relative font-semibold mb-6 text-primary'>Kontakta oss
+                    <h2 className='text-2xl relative font-semibold mb-6 text-primary'>{title}
                         <span className="absolute -bottom-3 left-10 w-[50px] h-[2px] bg-primary"></span>
                     </h2>
                     <div className='px-3 mb-2 md:w-3/5 text-center'>
-                        <p className='text-md font-medium leading-6'>Prisvärd matleverans för alla: Hungriga gör det enkelt att beställa och njuta av mat hemma </p>
+                        <p className='text-md font-medium leading-6'>{desc}</p>
                     </div>
                 </div>
                 <div className='flex flex-col items-center lg:flex-row justify-center gap-4 mt-5 '>
@@ -39,7 +50,7 @@ const ContactUs = () => {
                                     </div>
                                     <div>
                                         <h3 className='text-lg text-primary font-bold'>Plats:</h3>
-                                        <p className='text-sm'>Kristianstad</p>
+                                        <p className='text-sm'>{location}</p>
                                     </div>
                                 </div>
                                 <div className='flex items-center gap-3'>
@@ -50,7 +61,7 @@ const ContactUs = () => {
                                     </div>
                                     <div onClick={handleEmail} className='cursor-pointer'>
                                         <h3 className='text-lg text-primary font-bold'>E-post:</h3>
-                                        <p className='text-sm'>info.hungrigaab.se</p>
+                                        <p className='text-sm'>{email}</p>
                                     </div>
                                 </div>
                                 <div className='flex items-center gap-3'>
@@ -61,12 +72,12 @@ const ContactUs = () => {
                                     </div>
                                     <div onClick={handleCall} className='cursor-pointer'>
                                         <h3 className='text-lg text-primary font-bold'>Ringa:</h3>
-                                        <p className='text-sm'>0724438913</p>
+                                        <p className='text-sm'>{phone}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className='mt-10'>
-                                <iframe className='w-full' height={270} id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%Kristianstad+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                                <iframe className='w-full' src={url} width="600" height={270}  loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
