@@ -22,6 +22,8 @@ export default async function Home() {
     <>
       <Head>
         <title>Hemkörning från restaurang | Hungriga</title>
+        <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name="description" content="Hungriga är ett företag som vill skapa möjligheten för alla, små som stora, att kunna beställa matleveranser till hemmet. Tanken är att erbjuda ett billigare alternativ som alla kan dra nytta av. Även restauranger kan dra fördel av det billigare alternativet, vilket i sin tur gör att de kan förhandla fram mer förmånliga priser"></meta>
       </Head>
       <div id='home'>

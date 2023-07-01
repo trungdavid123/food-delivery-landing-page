@@ -31,7 +31,7 @@ const Navbar = () => {
 
     if (currentScrollPos > prevScrollPos && currentScrollPos !== 0) {
       setVisible(false)
-    } else  {
+    } else {
       setVisible(true)
     }
     setPrevScrollPos(currentScrollPos);
@@ -50,7 +50,7 @@ const Navbar = () => {
     <nav className={`fixed z-40 w-full transition ${visible ? 'translate-y-0' : '-translate-y-20'} `}>
       <div className={`md:h-auto bg-[#a50413] transition delay-50' ${showMenu ? 'h-screen ' : ''}`} onClick={() => showMenu ? removeMenuFromBg() : {}}>
         <div className="absolute right-4 top-5 md:hidden">
-          <button onClick={toggleMenu}>
+          <button aria-label="Toggle navbar" onClick={toggleMenu}>
             {showMenu ? (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-white w-10 h-10 rotate-180 duration-700  transition">
                 <path fillRule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clipRule="evenodd" />

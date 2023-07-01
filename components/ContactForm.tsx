@@ -27,7 +27,7 @@ const ContactForm = () => {
                     </div>
                 </div>
                 <div className='mt-3'>
-                    <label>Ämne</label>
+                    <label htmlFor='_subject'>Ämne</label>
                     <input type='text' name="_subject" onChange={(e) => setSubject(e.target.value)} value={subject} />
                 </div>
                 <div className='mt-5'>

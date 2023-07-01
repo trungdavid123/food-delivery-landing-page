@@ -77,7 +77,7 @@ const ContactUs: React.FC<Iprops> = ({ title, desc, location, email, phone, url 
                                 </div>
                             </div>
                             <div className='mt-10'>
-                                <iframe className='w-full' src={url} width="600" height={270}  loading="lazy"></iframe>
+                                <iframe title='google-map' className='w-full' src={url} width="600" height={270} loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
