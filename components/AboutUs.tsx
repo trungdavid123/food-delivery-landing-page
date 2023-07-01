@@ -11,16 +11,18 @@ interface IProps {
 }
 
 const AboutUs: React.FC<IProps> = ({ title, desc_1, desc_2, bg_img }) => {
-    
+
     const loaderProp = ({ src }: { src: string }) => {
         return src;
     }
     return (
         <div className='h-auto bg-white' id='about'>
             <div className='lg:py-16 lg:px-28 px-5 md:pt-20 md:pb-20 flex md:gap-16 flex-col-reverse gap-10 md:flex-row'>
-                <div>
+                <div className='md:w-[40%]'>
                     <Image loader={loaderProp}
-                        src={`${process.env.STRAPI_PUBLIC_URL}${bg_img.data.attributes.url}`} width={500} height={300} className='h-[50vh] object-cover rounded-lg' alt='img' />
+                        src={`${process.env.STRAPI_PUBLIC_URL}${bg_img.data.attributes.url}`} width={216}
+                        height={96}
+                        className='h-[50vh] w-full object-cover rounded-lg' alt='img' />
                 </div>
                 <div className='md:w-[40vw] flex flex-col gap-4'>
                     <div className='w-30'>
