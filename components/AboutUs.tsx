@@ -11,6 +11,7 @@ interface IProps {
 }
 
 const AboutUs: React.FC<IProps> = ({ title, desc_1, desc_2, bg_img }) => {
+    
     const loaderProp = ({ src }: { src: string }) => {
         return src;
     }

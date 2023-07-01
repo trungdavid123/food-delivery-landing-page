@@ -77,18 +77,19 @@ const Navbar = () => {
         <div>
           <div className='flex flex-col text-white font-medium mt-10 gap-7 text-lg md:text-base md:gap-10 md:mt-0 md:flex-row md:items-center'>
             <div>
-              <ScrollLink spy={true} onClick={removeMenuFromBg} smooth to="home" className='cursor-pointer hover:text-red-200 transition'>Hem</ScrollLink>
+              <ScrollLink href='#home' spy={true} onClick={removeMenuFromBg} smooth to="home" className='cursor-pointer hover:text-red-200 transition'>Hem</ScrollLink>
             </div>
             <div >
               <ScrollLink spy={true} onClick={removeMenuFromBg} offset={-60}
                 smooth to="about"
+                href='#about'
                 className='cursor-pointer hover:text-red-200 transition'>Om Hungriga</ScrollLink>
             </div>
             <div>
-              <ScrollLink spy={true} onClick={removeMenuFromBg} offset={-60} smooth to="services" className='cursor-pointer hover:text-red-200 transition'>Tjänster</ScrollLink>
+              <ScrollLink href='#services' spy={true} onClick={removeMenuFromBg} offset={-60} smooth to="services" className='cursor-pointer hover:text-red-200 transition'>Tjänster</ScrollLink>
             </div>
             <div className='text-center w-[10rem] border-2 border-white px-5 py-2 rounded-full cursor-pointer hover:text-primary md:w-auto outline-none hover:bg-white transition'>
-              <ScrollLink spy={true} onClick={removeMenuFromBg} smooth to="contact-us" offset={-60} >Kontakta oss</ScrollLink>
+              <ScrollLink href='#contact-us' spy={true} onClick={removeMenuFromBg} smooth to="contact-us" offset={-60} >Kontakta oss</ScrollLink>
             </div>
           </div>
         </div>

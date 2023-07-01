@@ -18,21 +18,21 @@ const ContactForm = () => {
                 <div className='flex flex-col md:flex-row gap-3'>
                     <div>
                         <label htmlFor='name'>Ditt namn</label>
-                        <input type='text' id='name' />
+                        <input type='text' aria-label="name" id='name' />
                     </div>
                     <div>
                         <label htmlFor='email'>Din e-post</label>
-                        <input id="email" type="email" name="email" />
+                        <input id="email" aria-label="email" type="email" name="email" />
                         <ValidationError prefix="Email" field="email" errors={state.errors} />
                     </div>
                 </div>
                 <div className='mt-3'>
                     <label htmlFor='_subject'>Ämne</label>
-                    <input type='text' name="_subject" onChange={(e) => setSubject(e.target.value)} value={subject} />
+                    <input type='text' aria-label="_subject" name="_subject" onChange={(e) => setSubject(e.target.value)} value={subject} />
                 </div>
                 <div className='mt-5'>
                     <label htmlFor='message'>Meddelande</label>
-                    <textarea id="message" name="message" className='md:h-56' placeholder="Skriv dina tankar här..." rows={5} />
+                    <textarea id="message" name="message" aria-label="message" className='md:h-56' placeholder="Skriv dina tankar här..." rows={5} />
                     <ValidationError prefix="Message" field="message" errors={state.errors} />
                 </div>
                 <div className='mt-5'>
